@@ -1,0 +1,46 @@
+/* MoviePage.module.css */
+
+.moviePage {
+    padding: 20px;
+}
+
+.movieDetails {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.review {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.editLink {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.editLink:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,147 @@
+/* Navbar.module.css */
+
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure Navbar is on top of other content */
+}
+
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbarItems {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    /* Center align navbar items */
+}
+
+.navbarItems li {
+    margin-right: 20px;
+}
+
+.navbarLink {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.navbarLink:hover {
+    opacity: 0.8;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    /* Initially hidden on larger screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: transform 0.3s ease;
+}
+
+/* Active state for hamburger menu */
+.bar.active:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.bar.active:nth-child(2) {
+    opacity: 0;
+}
+
+.bar.active:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Search box styles */
+.searchBox {
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.searchButton {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-right: 2rem;
+}
+
+.searchButton:hover {
+    background-color: #004599;
+}
+
+@media (max-width: 768px) {
+    .navbarContainer {
+        flex-wrap: wrap;
+    }
+
+    .navbarItems {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #007bff;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .navbarItems.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .searchBox {
+        margin-left: auto;
+        margin-top: 10px;
+    }
+
+    .navbarLink {
+        margin: 10px;
+    }
+}
